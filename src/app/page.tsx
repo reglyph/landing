@@ -13,32 +13,32 @@ export default function Home() {
           <div className={'flex gap-2 sm:flex-row flex-col w-full'}>
             <div
               className={
-                'p-4 group border hover:border-redish hover:border-solid duration-400 transition border-grayish-400 flex flex-col justify-between items-stretch sm:w-[256px] w-full sm:h-[256px] h-[140px] relative'
+                'p-4 group border hover:border-redish active:border-redish  duration-400 transition border-grayish-400 flex flex-col justify-between items-stretch sm:w-[256px] w-full sm:h-[256px] h-[140px] relative'
               }
             >
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] left-[-4px]'
+                  'w-[8px] h-[8px] opacity-0 group-active:opacity-100 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] left-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] right-[-4px]'
+                  'w-[8px] h-[8px] opacity-0 group-active:opacity-100 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] right-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] left-[-4px]'
+                  'w-[8px] h-[8px] opacity-0 group-active:opacity-100 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] left-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] right-[-4px]'
+                  'w-[8px] h-[8px] opacity-0 group-active:opacity-100 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] right-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'group-hover:text-white text-grayish-400 transition duration-400 text-md font-normal'
+                  'group-hover:text-white group-active:text-white text-grayish-400 transition duration-400 text-md font-normal'
                 }
               >
                 WORK IN PROGRESS
@@ -48,7 +48,7 @@ export default function Home() {
                   <span className={'text-grayish-400 text-xs'}>GITHUB</span>
                   <a
                     className={
-                      'transition hover:bg-redish duration-400 group-hover:text-white text-grayish-400'
+                      'transition hover:bg-redish active:bg-redish duration-400 group-hover:text-white group-active:text-white text-grayish-400'
                     }
                     href={'https://github.com/reglyph'}
                     target={'_blank'}
@@ -65,33 +65,33 @@ export default function Home() {
 
             <div
               className={
-                'p-4 group border hover:border-redish hover:border-solid duration-400 transition border-grayish-400 flex flex-col justify-between items-stretch sm:w-[256px] w-full sm:h-[256px] h-[140px] relative'
+                'p-4 group border hover:border-redish active:border-redish hover:border-solid duration-400 transition border-grayish-400 flex flex-col justify-between items-stretch sm:w-[256px] w-full sm:h-[256px] h-[140px] relative'
               }
             >
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] left-[-4px]'
+                  'w-[8px] h-[8px] group-active:opacity-100 opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] left-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] right-[-4px]'
+                  'w-[8px] h-[8px] group-active:opacity-100 opacity-0  group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] right-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] left-[-4px]'
+                  'w-[8px] h-[8px] group-active:opacity-100 opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 bottom-[-4px] left-[-4px]'
                 }
               ></span>
               <span
                 className={
-                  'w-[8px] h-[8px] opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] right-[-4px]'
+                  'w-[8px] h-[8px] group-active:opacity-100 opacity-0 group-hover:opacity-100 transition absolute border border-redish bg-white z-10 top-[-4px] right-[-4px]'
                 }
               ></span>
 
               <span
                 className={
-                  'text-grayish-400 duration-400 group-hover:text-white text-md font-normal'
+                  'text-grayish-400 duration-400 group-hover:text-white group-active:text-white text-md font-normal'
                 }
               >
                 CONTACT US
@@ -101,7 +101,7 @@ export default function Home() {
                   <span className={'text-grayish-400 text-xs'}>MAIL</span>
                   <a
                     className={
-                      'transition text-grayish-400 group-hover:text-white hover:bg-grayish-200 duration-400'
+                      'transition text-grayish-400 group-hover:text-white group-active:text-white hover:bg-grayish-200 active:bg-grayish-200 duration-400'
                     }
                     href={'mailto:hello@reglyph.dev'}
                     target={'_blank'}
@@ -117,13 +117,17 @@ export default function Home() {
             </div>
           </div>
 
-          <button
+          <a
             className={
-              'w-full bg-white p-2.5 hover:bg-redish hover:text-white text-black duration-400 transition cursor-pointer'
+              'w-full bg-white p-2.5 hover:bg-redish active:text-white active:bg-redish hover:text-white text-black duration-400 transition cursor-pointer justify-center flex'
             }
+            href="https://t.me/furiesd"
+            target={'_blank'}
           >
-            <span className={''}>Want to make this shit with us?</span>
-          </button>
+            <span className={'text-center'}>
+              Want to make this shit with us?
+            </span>
+          </a>
         </div>
 
         <small className={'text-grayish-400 text-xs absolute bottom-5'}>
