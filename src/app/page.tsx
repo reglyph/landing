@@ -101,7 +101,7 @@ export default function Home() {
                   <span className={'text-grayish-400 text-xs'}>MAIL</span>
                   <a
                     className={
-                      'transition text-grayish-400 group-hover:text-white group-active:text-white hover:bg-grayish-200 active:bg-grayish-200 duration-400'
+                      'transition text-grayish-400 group-hover:text-white group-active:text-white hover:bg-redish active:bg-redish duration-400'
                     }
                     href={'mailto:hello@reglyph.dev'}
                     target={'_blank'}
