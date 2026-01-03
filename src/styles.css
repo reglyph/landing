@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-redish: rgba(255, 63, 66, 1);
+  --color-grayish-400: rgba(255, 255, 255, 0.4);
+  --color-grayish-200: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: #000000;
+  font-family: 'JetBrains Mono', sans-serif;
+}
