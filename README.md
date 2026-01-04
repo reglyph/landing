@@ -1,5 +1,8 @@
 # Reglyph Landing Page
 
+![Cover image](https://github.com/reglyph/landing/blob/master/public/reglyph-og-big.jpg?raw=true)
+
+
 A small landing page for @reglyph built with Next.js, React, and TypeScript.
 
 ## Quick Start
