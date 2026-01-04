@@ -1,15 +1,66 @@
+'use client';
+
+import { motion } from 'motion/react';
 import Image from 'next/image';
+import React from 'react';
 
 export default function Home() {
   return (
     <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className={'absolute top-0 left-0 h-1.5 w-full '}
+      >
+        <div className={'w-[100%] absolute z-10 bg-black h-2.5'}></div>
+        <div className={'w-[90%] absolute z-20 bg-black h-2.5'}></div>
+        <div className={'w-[80%] absolute z-20 bg-black h-2.5'}></div>
+        <div className={'w-[70%] absolute z-20 bg-[#0F0F0F] h-2.5'}></div>
+        <div className={'w-[60%] absolute z-20 bg-[#232323] h-2.5'}></div>
+        <div className={'w-[50%] absolute z-20 bg-[#373737] h-2.5'}></div>
+        <div className={'w-[40%] absolute z-20 bg-[#696969] h-2.5'}></div>
+        <div className={'w-[30%] absolute z-20 bg-[#9B9B9B] h-2.5'}></div>
+        <div className={'w-[20%] absolute z-20 bg-[#CDCDCD] h-2.5'}></div>
+        <div className={'w-[10%] absolute z-20 bg-white h-2.5'}></div>
+      </motion.div>
+
       <div className="flex p-4 items-center justify-center h-screen w-full xl:space-y-[128px] space-y-[64px] flex-col">
         <div className={'flex flex-col items-center'}>
-          <span className={'text-grayish-400 text-md'}>{'// UI-kit //'}</span>
-          <Image src={'/logo-red.svg'} alt={'logo'} width={240} height={100} />
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className={'text-grayish-400 text-md'}
+          >
+            {'// UI-kit //'}
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Image
+              loading={'eager'}
+              src={'/logo-red.svg'}
+              alt={'logo'}
+              style={{ width: 'auto', height: 'auto' }}
+              width={240}
+              height={100}
+            />
+            <h1 className={'sr-only'}>
+              Reglyph is an open-source UI kit for React, currently under
+              development.
+            </h1>
+          </motion.div>
         </div>
 
-        <div className={'flex flex-col gap-2.5 items-center'}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className={'flex flex-col gap-2.5 items-center'}
+        >
           <div className={'flex gap-2 sm:flex-row flex-col w-full'}>
             <div
               className={
@@ -128,11 +179,22 @@ export default function Home() {
               Want to make this shit with us?
             </span>
           </a>
-        </div>
+        </motion.div>
 
-        <small className={'text-grayish-400 text-xs absolute bottom-5'}>
-          (c) Reglyph Team, 2026
-        </small>
+        <a
+          href="https://github.com/reglyph"
+          target={'_blank'}
+          className={'absolute bottom-5'}
+        >
+          <motion.small
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className={'text-grayish-400 text-xs'}
+          >
+            (c) Reglyph Team, 2026
+          </motion.small>
+        </a>
       </div>
     </>
   );

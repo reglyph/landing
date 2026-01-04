@@ -8,8 +8,91 @@ const JetBrains_Font = JetBrains_Mono({
   subsets: ['latin'],
 });
 
+const base = new URL('https://reglyph.dev');
+
 export const metadata: Metadata = {
-  title: '@reglyph/landing',
+  title: {
+    default: '@reglyph - an open-source UI Kit',
+    template: '%s | Reglyph',
+  },
+
+  description:
+    'An open-source UI kit currently under active development by a team of enthusiasts committed to building high-quality products.',
+
+  applicationName: 'Reglyph',
+  keywords: [
+    'reglyph',
+    'ui kit',
+    'design system',
+    'react',
+    'components',
+    'web',
+    'accessibility',
+    'theming',
+    'developer tooling',
+  ],
+
+  authors: [
+    {
+      name: 'Reglyph Team',
+      url: 'https://reglyph.dev',
+    },
+  ],
+  creator: 'Reglyph',
+  publisher: 'Reglyph',
+
+  metadataBase: base,
+
+  alternates: {
+    canonical: new URL('/', base).toString(),
+    languages: {
+      'en-US': '/en',
+    },
+  },
+
+  manifest: new URL('/manifest.json', base).toString(),
+
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: base.toString(),
+    siteName: 'Reglyph',
+    title: '@reglyph - an open-source UI Kit',
+    description:
+      'An open-source UI kit currently under active development by a team of enthusiasts committed to building high-quality products.',
+    images: [
+      {
+        url: new URL('/reglyph-og.jpg', base).toString(),
+        width: 1200,
+        height: 630,
+        alt: 'Reglyph — UI Kit preview',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: '@reglyph - open-source UI Kit',
+    description:
+      'An open-source UI kit currently under active development by a team of enthusiasts committed to building high-quality products.',
+    images: [new URL('/reglyph-og.jpg', base).toString()],
+    creator: '@reglyph',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    noarchive: false,
+    googleBot: {
+      'index': true,
+      'follow': true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
+  category: 'web-development',
 };
 
 export default function RootLayout({
@@ -22,19 +105,6 @@ export default function RootLayout({
       <body
         className={`${JetBrains_Font.variable} antialiased h-[100dvh] w-full`}
       >
-        <div className={'absolute top-0 left-0 h-1.5 w-full'}>
-          <div className={'w-[100%] absolute z-10 bg-black h-2.5'}></div>
-          <div className={'w-[90%] absolute z-20 bg-black h-2.5'}></div>
-          <div className={'w-[80%] absolute z-20 bg-black h-2.5'}></div>
-          <div className={'w-[70%] absolute z-20 bg-[#0F0F0F] h-2.5'}></div>
-          <div className={'w-[60%] absolute z-20 bg-[#232323] h-2.5'}></div>
-          <div className={'w-[50%] absolute z-20 bg-[#373737] h-2.5'}></div>
-          <div className={'w-[40%] absolute z-20 bg-[#696969] h-2.5'}></div>
-          <div className={'w-[30%] absolute z-20 bg-[#9B9B9B] h-2.5'}></div>
-          <div className={'w-[20%] absolute z-20 bg-[#CDCDCD] h-2.5'}></div>
-          <div className={'w-[10%] absolute z-20 bg-white h-2.5'}></div>
-        </div>
-
         {children}
       </body>
     </html>
