@@ -25,7 +25,8 @@ export default function Home() {
         <div className={'w-[10%] absolute z-20 bg-white h-2.5'}></div>
       </motion.div>
 
-      <div className="flex p-4 items-center justify-center h-screen w-full xl:space-y-[128px] space-y-[64px] flex-col">
+
+      <div className="flex p-4 items-center justify-center h-full w-full xl:space-y-[128px] space-y-[64px] flex-col">
         <div className={'flex flex-col items-center'}>
           <motion.span
             initial={{ opacity: 0 }}
@@ -59,7 +60,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className={'flex flex-col gap-2.5 items-center'}
+          className={'flex flex-col gap-2.5 items-center sm:w-auto w-full m-0 mb-4'}
         >
           <div className={'flex gap-2 sm:flex-row flex-col w-full'}>
             <div
@@ -184,7 +185,7 @@ export default function Home() {
         <a
           href="https://github.com/reglyph"
           target={'_blank'}
-          className={'absolute bottom-5'}
+          className={'sm:absolute sm:bottom-5'}
         >
           <motion.small
             initial={{ opacity: 0 }}

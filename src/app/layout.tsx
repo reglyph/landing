@@ -103,7 +103,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${JetBrains_Font.variable} antialiased h-[100dvh] w-full`}
+        className={`${JetBrains_Font.variable} antialiased h-screen w-full`}
       >
         {children}
       </body>
